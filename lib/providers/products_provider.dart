@@ -1,5 +1,7 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:riverpod_files/models/product.dart';
+
+//part 'products_provider.g.dart';
 
 const List<Product> allProducts = [
   Product(
@@ -59,3 +61,10 @@ final reducedProductProvider = Provider(
         .toList();
   },
 );
+
+//Genarated Providers
+
+@riverpod
+List<Product> products(ref) {
+  return allProducts;
+} 
